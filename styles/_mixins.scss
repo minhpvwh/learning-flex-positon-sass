@@ -1,0 +1,8 @@
+@import 'variable';
+
+@mixin buttonStyle {
+  background: $main-color;
+  border: 0;
+  padding: 5px 10px;
+  color: white;
+}

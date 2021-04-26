@@ -1,0 +1,45 @@
+@import 'variable';
+@import "header";
+@import 'mixins';
+
+
+footer {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//footer button {
+//  @include buttonStyle();
+//  background: green;
+//}
+
+//viết code lồng nhau thay cho đoạn phía trên
+
+footer {
+  button {
+    @include buttonStyle();
+  }
+
+  p {
+    font-size: 20px
+  }
+}
+
+// kế thừa trong scss
+
+%buttonStyle {
+  background: $main-color;
+  border: 0;
+  padding: 5px 10px;
+  color: white;
+}
+
+.button1 {
+  @extend %buttonStyle;
+}
+
+.button2 {
+  @extend %buttonStyle;
+}
